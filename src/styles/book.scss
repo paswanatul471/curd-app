@@ -1,9 +1,16 @@
 
 
-.navbar{
+#book{
     background-color: #271313 !important;
+    color: #ffc9c9;
+    padding: 35px 0;
+    text-align: center;
     
 }
-.app-name{
-    color: #ffc9c9;
-}
+
+@media screen and (max-width: 480px) {
+    #book{
+        width: 130%;
+    }
+
+  }

@@ -1,6 +1,7 @@
 import React,{Fragment} from "react";
 import Books from "./Books";
 import { Link, useNavigate } from "react-router-dom";
+import {AiOutlineDelete,AiOutlineEdit} from "react-icons/ai"
 
 function Home() {
   let history = useNavigate();
@@ -31,7 +32,7 @@ function Home() {
                 <th scope="col" className="text-center">Author</th>
                 <th scope="col" className="text-center">Published</th>
                 <th scope="col" className="text-center">ISBN</th>
-                <th scope="col" className="text-center">Actions</th>
+                <th scope="col" className="text-start">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -43,12 +44,12 @@ function Home() {
                         <td className="text-center">{item.Author}</td>
                         <td className="text-center">{item.Published}</td>
                         <td className="text-center">{item.ISBN}</td>
-                        <td className="d-flex align-item-center justify-content-center">
+                        <td >
                           <Link to={`/edit`}>
-                          <button className="edit-button" onClick={() => handleEdit(item.id, item.Title, item.Author, item.Published, item.ISBN)}>EDIT</button>
+                          <button className="edit-button" onClick={() => handleEdit(item.id, item.Title, item.Author, item.Published, item.ISBN)}><AiOutlineEdit/></button>
                           </Link>
                           &nbsp;
-                          <button className="delete-button" onClick={() => handleDelete(item.id)}>DELETE</button>
+                          <button className="delete-button " onClick={() => handleDelete(item.id)}><AiOutlineDelete/></button>
                         </td>
                       </tr>
                     );
