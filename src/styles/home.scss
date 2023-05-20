@@ -1,0 +1,26 @@
+#home{
+    margin-top: $m_top;
+}
+.createButton{
+    background-color: $color6;
+    color: $color1;
+    border: none;
+    padding: 3px;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.edit-button{
+    background-color: $color2_1;
+    color: $color1;
+    border: none;
+    padding: 0 1.6rem;
+    border-radius: 5px;
+}
+.delete-button{
+    background-color: #660505db;
+    color: $color1;
+    border: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
